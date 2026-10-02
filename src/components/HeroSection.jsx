@@ -167,7 +167,7 @@ export default function HeroSection({
                   className="cursor-pointer transition-transform hover:scale-105 active:scale-95 z-20"
                   title="Click lamp to toggle Dark Mode"
                 >
-                  <svg viewBox="0 0 95 80" className="w-16 sm:w-24 h-auto">
+                  <svg viewBox="0 0 95 80" className="w-20 sm:w-24 h-auto">
                     <path 
                       d="M 32 10 
                          L 63 10 
@@ -186,30 +186,30 @@ export default function HeroSection({
                 </div>
 
                 {/* Straight Stand Pole connected directly to the lampshade and continuing all the way down */}
-                <div className="w-[3px] sm:w-[3.5px] h-28 sm:h-44 bg-black dark:bg-neutral-800 -mt-2 z-10 relative">
+                <div className="w-[3.5px] h-36 sm:h-44 bg-black dark:bg-neutral-800 -mt-2 z-10 relative">
                   
                   {/* Pull Cord hanging alongside the stand pole */}
                   <div 
                     onClick={toggleTheme}
-                    className={`absolute top-0 -left-3 sm:-left-3.5 flex flex-col items-center cursor-pointer group ${cordPulled ? "pulling-cord" : ""}`}
+                    className={`absolute top-0 -left-3.5 flex flex-col items-center cursor-pointer group ${cordPulled ? "pulling-cord" : ""}`}
                     title="Pull cord for Dark mode!"
                   >
-                    <div className="w-[2px] h-7 sm:h-9 bg-black dark:bg-white"></div>
-                    <div className="w-2.5 sm:w-3 h-3.5 sm:h-4.5 rounded-full border-[2px] border-black dark:border-white bg-white dark:bg-black"></div>
+                    <div className="w-[2px] h-9 bg-black dark:bg-white"></div>
+                    <div className="w-3 h-4.5 rounded-full border-[2px] border-black dark:border-white bg-white dark:bg-black"></div>
                   </div>
 
                   {/* Handwritten 'Dark mode?' note with curved arrow */}
                   <div 
                     onClick={toggleTheme}
-                    className="absolute top-8 sm:top-10 -left-16 sm:left-3 flex items-center gap-1 cursor-pointer whitespace-nowrap select-none"
+                    className="absolute top-10 left-3 flex items-center gap-1 cursor-pointer whitespace-nowrap select-none"
                   >
-                    <span className="doodle-font text-[11px] sm:text-sm text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors font-normal">
-                      {isDark ? "Light mode?" : "Dark mode?"}
-                    </span>
-                    <svg viewBox="0 0 35 30" className="w-5 sm:w-6 h-4 sm:h-5 text-neutral-500 dark:text-neutral-400 hidden sm:block">
+                    <svg viewBox="0 0 35 30" className="w-6 h-5 text-neutral-500 dark:text-neutral-400">
                       <path d="M 6 8 Q 24 12 28 22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                       <path d="M 23 18 L 28 22 L 29 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
+                    <span className="doodle-font text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors font-normal">
+                      {isDark ? "Light mode?" : "Dark mode?"}
+                    </span>
                   </div>
 
                 </div>
