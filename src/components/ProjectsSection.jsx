@@ -15,7 +15,7 @@ export default function ProjectsSection({ theme, onSelectProject, playSound }) {
   return (
     <section id="projects" className="w-full pt-6 sm:pt-8 pb-12 sm:pb-16 px-4 sm:px-6 md:px-12 flex justify-center">
       <div className="max-w-6xl w-full">
-        
+
         {/* Centered Top Filter Tabs */}
         <div className="flex items-center justify-center gap-3 sm:gap-6 md:gap-8 mb-8 sm:mb-12 flex-wrap">
           {/* "Featured Projects" Tab */}
@@ -57,25 +57,43 @@ export default function ProjectsSection({ theme, onSelectProject, playSound }) {
 
         {/* Project Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-          
+
           {/* ================= CARD 1: CourseGen AI ================= */}
           {(activeTab === "all" || activeTab === "ai") && (
-            <div 
+            <div
               onClick={() => {
                 playSound && playSound("pop");
                 onSelectProject && onSelectProject("coursegen");
               }}
-              className="group relative rounded-3xl bg-[#0F172A] text-white p-5 sm:p-7 md:p-8 flex flex-col justify-between overflow-hidden shadow-lg border border-slate-800 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl cursor-pointer min-h-[420px] sm:min-h-[460px]"
+              className="
+      group relative
+      rounded-3xl
+      bg-[#0F172A]
+      text-white
+      p-5 sm:p-7 md:p-8
+      flex flex-col
+      overflow-hidden
+      shadow-lg
+      border border-slate-800
+      transition-all duration-300
+      hover:-translate-y-1
+      hover:shadow-2xl
+      cursor-pointer
+      h-full
+      min-h-[460px]
+    "
             >
               {/* Top Badges */}
-              <div className="flex items-center justify-between mb-4 gap-2 flex-wrap">
+              <div className="flex items-center justify-between mb-5 gap-2 flex-wrap shrink-0">
                 <span className="px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
                   Featured AI Platform
                 </span>
+
                 <div className="flex items-center gap-2">
                   <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-800 text-slate-300 border border-slate-700">
                     Next.js 14
                   </span>
+
                   <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-800 text-slate-300 border border-slate-700">
                     Gemini API
                   </span>
@@ -83,56 +101,110 @@ export default function ProjectsSection({ theme, onSelectProject, playSound }) {
               </div>
 
               {/* Card Content */}
-              <div className="mb-4 z-10">
-                <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-2 text-white flex items-center gap-2">
-                  CourseGen AI
-                  <span className="text-xs font-normal text-emerald-400 font-mono">v1.0 Live</span>
+              <div className="mb-5 z-10 shrink-0">
+                <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-2 text-white flex flex-wrap items-center gap-2">
+                  <span>CourseGen AI</span>
+
+                  <span className="text-xs font-normal text-emerald-400 font-mono">
+                    v1.0 Live
+                  </span>
                 </h3>
+
                 <p className="text-sm md:text-base text-slate-300 leading-relaxed max-w-md">
-                  Autonomous AI course creation platform generating complete multi-chapter curricula with integrated YouTube educational search, Neon PostgreSQL & Clerk.
+                  Autonomous AI course creation platform generating complete
+                  multi-chapter curricula with integrated YouTube educational search,
+                  Neon PostgreSQL & Clerk.
                 </p>
               </div>
 
               {/* Visual: Curriculum Dashboard UI Mockup */}
-              <div className="relative w-full h-56 flex items-end justify-center mt-2">
-                <div className="w-full max-w-[390px] h-52 bg-slate-900 border-2 border-slate-700/80 rounded-t-2xl p-3 shadow-2xl flex flex-col justify-between transition-transform group-hover:-translate-y-1">
-                  <div className="flex items-center justify-between border-b border-slate-800 pb-2">
-                    <div className="flex items-center gap-2">
-                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                      <span className="text-xs font-bold text-slate-200">AI Curriculum Studio</span>
+              <div className="relative w-full flex-1 min-h-[220px] flex items-end justify-center mt-auto">
+                <div
+                  className="
+          w-full
+          max-w-[390px]
+          min-h-[210px]
+          bg-slate-900
+          border-2 border-slate-700/80
+          rounded-t-2xl
+          p-3
+          shadow-2xl
+          flex flex-col
+          transition-transform
+          group-hover:-translate-y-1
+        "
+                >
+                  {/* Header */}
+                  <div className="flex items-center justify-between border-b border-slate-800 pb-2 gap-2">
+                    <div className="flex items-center gap-2 min-w-0">
+                      <span className="w-2.5 h-2.5 shrink-0 rounded-full bg-emerald-400 animate-pulse" />
+
+                      <span className="text-xs font-bold text-slate-200 truncate">
+                        AI Curriculum Studio
+                      </span>
                     </div>
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800">
+
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800 whitespace-nowrap shrink-0">
                       Gemini Flash
                     </span>
                   </div>
 
+                  {/* Curriculum Content */}
                   <div className="space-y-2 my-2">
-                    <div className="p-2 rounded-xl bg-slate-800/80 border border-slate-700/60 flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <span className="text-base">📚</span>
-                        <div>
-                          <p className="text-xs font-semibold text-white">Full-Stack Distributed Systems</p>
-                          <p className="text-[9px] text-slate-400">5 Chapters • Targeted Video Matched</p>
+                    {/* Main Course */}
+                    <div className="p-2 rounded-xl bg-slate-800/80 border border-slate-700/60 flex items-center justify-between gap-2">
+                      <div className="flex items-center gap-2 min-w-0">
+                        <span className="text-base shrink-0">📚</span>
+
+                        <div className="min-w-0">
+                          <p className="text-xs font-semibold text-white truncate">
+                            Full-Stack Distributed Systems
+                          </p>
+
+                          <p className="text-[9px] text-slate-400 truncate">
+                            5 Chapters • Targeted Video Matched
+                          </p>
                         </div>
                       </div>
-                      <span className="text-[10px] text-emerald-400 font-bold bg-emerald-950/60 px-2 py-0.5 rounded">100% Ready</span>
+
+                      <span className="text-[10px] text-emerald-400 font-bold bg-emerald-950/60 px-2 py-0.5 rounded whitespace-nowrap shrink-0">
+                        100% Ready
+                      </span>
                     </div>
 
+                    {/* Database / ORM */}
                     <div className="grid grid-cols-2 gap-2 text-[10px]">
-                      <div className="p-2 rounded-lg bg-slate-800/50 border border-slate-700/40 text-slate-300">
-                        <span className="block text-[8px] text-slate-400 uppercase">Database</span>
-                        <span className="font-semibold text-white">Neon PostgreSQL</span>
+                      <div className="p-2 rounded-lg bg-slate-800/50 border border-slate-700/40 text-slate-300 min-w-0">
+                        <span className="block text-[8px] text-slate-400 uppercase">
+                          Database
+                        </span>
+
+                        <span className="font-semibold text-white truncate block">
+                          Neon PostgreSQL
+                        </span>
                       </div>
-                      <div className="p-2 rounded-lg bg-slate-800/50 border border-slate-700/40 text-slate-300">
-                        <span className="block text-[8px] text-slate-400 uppercase">ORM</span>
-                        <span className="font-semibold text-white">Drizzle ORM</span>
+
+                      <div className="p-2 rounded-lg bg-slate-800/50 border border-slate-700/40 text-slate-300 min-w-0">
+                        <span className="block text-[8px] text-slate-400 uppercase">
+                          ORM
+                        </span>
+
+                        <span className="font-semibold text-white truncate block">
+                          Drizzle ORM
+                        </span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="w-full bg-slate-800/90 rounded-lg p-1.5 flex justify-between items-center text-[10px] text-slate-300 border border-slate-700/50">
-                    <span>⚡ Chapter Generation with Code & Concepts</span>
-                    <span className="text-emerald-400 font-semibold">View Case Study →</span>
+                  {/* Footer */}
+                  <div className="w-full bg-slate-800/90 rounded-lg p-1.5 flex items-center justify-between gap-2 text-[10px] text-slate-300 border border-slate-700/50 mt-auto">
+                    <span className="truncate">
+                      ⚡ Chapter Generation with Code & Concepts
+                    </span>
+
+                    <span className="text-emerald-400 font-semibold whitespace-nowrap">
+                      View Case Study →
+                    </span>
                   </div>
                 </div>
               </div>
@@ -141,7 +213,7 @@ export default function ProjectsSection({ theme, onSelectProject, playSound }) {
 
           {/* ================= CARD 2: TorqueVault ================= */}
           {(activeTab === "all" || activeTab === "fullstack") && (
-            <div 
+            <div
               onClick={() => {
                 playSound && playSound("pop");
                 onSelectProject && onSelectProject("torquevault");
@@ -185,10 +257,10 @@ export default function ProjectsSection({ theme, onSelectProject, playSound }) {
                   <div className="relative w-28 h-28 flex items-center justify-center">
                     <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
                       <circle cx="50" cy="50" r="40" stroke="#331417" strokeWidth="8" fill="none" />
-                      <circle 
-                        cx="50" cy="50" r="40" 
-                        stroke="#e61932" 
-                        strokeWidth="8" 
+                      <circle
+                        cx="50" cy="50" r="40"
+                        stroke="#e61932"
+                        strokeWidth="8"
                         fill="none"
                         strokeDasharray="251.2"
                         strokeDashoffset="75"
@@ -212,22 +284,40 @@ export default function ProjectsSection({ theme, onSelectProject, playSound }) {
 
           {/* ================= CARD 3: SyncWorld ================= */}
           {(activeTab === "all" || activeTab === "fullstack") && (
-            <div 
+            <div
               onClick={() => {
                 playSound && playSound("pop");
                 onSelectProject && onSelectProject("syncworld");
               }}
-              className="group relative rounded-3xl bg-[#090D16] text-white p-5 sm:p-7 md:p-8 flex flex-col justify-between overflow-hidden shadow-lg border border-indigo-950 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl cursor-pointer min-h-[420px] sm:min-h-[460px]"
+              className="
+      group relative
+      rounded-3xl
+      bg-[#090D16]
+      text-white
+      p-5 sm:p-7 md:p-8
+      flex flex-col
+      overflow-hidden
+      shadow-lg
+      border border-indigo-950
+      transition-all duration-300
+      hover:-translate-y-1
+      hover:shadow-2xl
+      cursor-pointer
+      h-full
+      min-h-[460px]
+    "
             >
               {/* Top Badges */}
-              <div className="flex items-center justify-between mb-4 gap-2 flex-wrap">
+              <div className="flex items-center justify-between mb-5 gap-2 flex-wrap shrink-0">
                 <span className="px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
                   Real-Time Distributed System
                 </span>
+
                 <div className="flex items-center gap-2">
                   <span className="px-2 sm:px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium bg-slate-900 text-slate-300 border border-slate-700">
                     WebSockets
                   </span>
+
                   <span className="px-2 sm:px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium bg-slate-900 text-slate-300 border border-slate-700">
                     OpenJDK 21
                   </span>
@@ -235,41 +325,92 @@ export default function ProjectsSection({ theme, onSelectProject, playSound }) {
               </div>
 
               {/* Card Content */}
-              <div className="mb-4 z-10">
-                <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-2 text-white flex items-center gap-2">
-                  SyncWorld
-                  <span className="text-xs font-normal text-indigo-400 font-mono">&lt;60ms Sync</span>
+              <div className="mb-5 z-10 shrink-0">
+                <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-2 text-white flex flex-wrap items-center gap-2">
+                  <span>SyncWorld</span>
+
+                  <span className="text-xs font-normal text-indigo-400 font-mono">
+                    &lt;60ms Sync
+                  </span>
                 </h3>
+
                 <p className="text-sm md:text-base text-slate-300 leading-relaxed max-w-md">
-                  Collaborative multi-tenant workspace with real-time vector whiteboard, remote cursor mesh, and an in-browser sandbox IDE with javac compiler diagnostics.
+                  Collaborative multi-tenant workspace with real-time vector
+                  whiteboard, remote cursor mesh, and an in-browser sandbox IDE
+                  with javac compiler diagnostics.
                 </p>
               </div>
 
-              {/* Visual: Collaborative Code & Whiteboard Split */}
-              <div className="relative w-full h-56 flex items-end justify-center mt-2">
-                <div className="w-full max-w-[400px] h-52 bg-slate-950 border border-indigo-900/60 rounded-t-2xl p-3 shadow-2xl flex flex-col justify-between transition-transform group-hover:-translate-y-1">
-                  <div className="flex items-center justify-between border-b border-slate-800 pb-2">
-                    <div className="flex items-center gap-2">
-                      <span className="w-2.5 h-2.5 rounded-full bg-indigo-500 animate-pulse"></span>
-                      <span className="text-xs font-mono font-bold text-slate-200">Main.java • ws://connected</span>
+              {/* Visual */}
+              <div className="relative w-full flex-1 min-h-[220px] flex items-end justify-center mt-auto">
+                <div
+                  className="
+          w-full
+          max-w-[400px]
+          min-h-[210px]
+          bg-slate-950
+          border border-indigo-900/60
+          rounded-t-2xl
+          p-3
+          shadow-2xl
+          flex flex-col
+          transition-transform
+          group-hover:-translate-y-1
+        "
+                >
+                  {/* Header */}
+                  <div className="flex items-center justify-between border-b border-slate-800 pb-2 gap-2">
+                    <div className="flex items-center gap-2 min-w-0">
+                      <span className="w-2.5 h-2.5 shrink-0 rounded-full bg-indigo-500 animate-pulse" />
+
+                      <span className="text-xs font-mono font-bold text-slate-200 truncate">
+                        Main.java • ws://connected
+                      </span>
                     </div>
-                    <div className="flex items-center -space-x-1">
-                      <span className="w-5 h-5 rounded-full bg-emerald-500 text-[9px] flex items-center justify-center font-bold">MV</span>
-                      <span className="w-5 h-5 rounded-full bg-amber-500 text-[9px] flex items-center justify-center font-bold">ER</span>
+
+                    <div className="flex items-center -space-x-1 shrink-0">
+                      <span className="w-5 h-5 rounded-full bg-emerald-500 text-[9px] flex items-center justify-center font-bold">
+                        MV
+                      </span>
+
+                      <span className="w-5 h-5 rounded-full bg-amber-500 text-[9px] flex items-center justify-center font-bold">
+                        ER
+                      </span>
                     </div>
                   </div>
 
-                  <div className="bg-slate-900/90 rounded-lg p-2.5 font-mono text-[10px] text-slate-300 border border-slate-800 my-2 space-y-1">
-                    <p className="text-indigo-400 font-semibold">public class Main &#123;</p>
-                    <p className="pl-3 text-slate-300">public static void main(String[] args) &#123;</p>
-                    <p className="pl-6 text-emerald-400">System.out.println("SyncWorld Mesh OK"); // javac clean</p>
-                    <p className="pl-3 text-slate-300">&#125;</p>
-                    <p className="text-indigo-400">&#125;</p>
+                  {/* Code */}
+                  <div className="bg-slate-900/90 rounded-lg p-2.5 font-mono text-[10px] text-slate-300 border border-slate-800 my-2 space-y-1 overflow-hidden">
+                    <p className="text-indigo-400 font-semibold">
+                      public class Main &#123;
+                    </p>
+
+                    <p className="pl-3 text-slate-300">
+                      public static void main(String[] args) &#123;
+                    </p>
+
+                    <p className="pl-6 text-emerald-400 break-words">
+                      System.out.println("SyncWorld Mesh OK"); // javac clean
+                    </p>
+
+                    <p className="pl-3 text-slate-300">
+                      &#125;
+                    </p>
+
+                    <p className="text-indigo-400">
+                      &#125;
+                    </p>
                   </div>
 
-                  <div className="w-full bg-indigo-950/60 rounded p-1.5 flex justify-between text-[10px] text-indigo-200 border border-indigo-900/50">
-                    <span>📡 Multi-peer Vector Canvas & Remote Cursors</span>
-                    <span className="text-indigo-400 font-bold">Inspect Details →</span>
+                  {/* Footer */}
+                  <div className="w-full bg-indigo-950/60 rounded p-1.5 flex items-center justify-between gap-2 text-[10px] text-indigo-200 border border-indigo-900/50 mt-auto">
+                    <span className="truncate">
+                      📡 Multi-peer Vector Canvas & Remote Cursors
+                    </span>
+
+                    <span className="text-indigo-400 font-bold whitespace-nowrap">
+                      Inspect Details →
+                    </span>
                   </div>
                 </div>
               </div>
@@ -278,7 +419,7 @@ export default function ProjectsSection({ theme, onSelectProject, playSound }) {
 
           {/* ================= CARD 4: PrepMaster Studio ================= */}
           {(activeTab === "all" || activeTab === "ai") && (
-            <div 
+            <div
               onClick={() => {
                 playSound && playSound("pop");
                 onSelectProject && onSelectProject("prepmaster");
@@ -329,8 +470,8 @@ export default function ProjectsSection({ theme, onSelectProject, playSound }) {
                     {/* Audio wave simulation bars */}
                     <div className="flex items-center justify-center gap-1.5 h-8">
                       {[40, 70, 90, 60, 100, 75, 45, 85, 95, 65, 30, 80, 50].map((h, i) => (
-                        <span 
-                          key={i} 
+                        <span
+                          key={i}
                           className="w-1.5 bg-sky-400 rounded-full transition-all duration-300"
                           style={{ height: `${h}%` }}
                         ></span>
@@ -349,7 +490,7 @@ export default function ProjectsSection({ theme, onSelectProject, playSound }) {
 
           {/* ================= CARD 5: MilkMart Platform ================= */}
           {(activeTab === "all" || activeTab === "fullstack") && (
-            <div 
+            <div
               onClick={() => {
                 playSound && playSound("pop");
                 onSelectProject && onSelectProject("milkmart");
