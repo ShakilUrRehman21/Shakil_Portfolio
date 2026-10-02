@@ -19,27 +19,27 @@ export default function Footer({ playSound }) {
   };
 
   return (
-    <footer className="relative z-30 w-full bg-[#000000] text-white py-16 px-6 md:px-16 selection:bg-neutral-800 selection:text-white border-t border-neutral-900">
-      <div className="max-w-6xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+    <footer className="relative z-30 w-full bg-[#000000] text-white py-12 sm:py-16 px-4 sm:px-6 md:px-16 selection:bg-neutral-800 selection:text-white border-t border-neutral-900">
+      <div className="max-w-6xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16">
         
         {/* Left Column: Feel free to reach out + Links */}
         <div className="lg:col-span-6 flex flex-col justify-between">
           <div>
-            <h2 className="text-3xl md:text-4xl font-normal tracking-tight text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal tracking-tight text-white mb-4 sm:mb-6">
               Feel free to reach out!
             </h2>
 
-            <p className="text-base sm:text-lg text-white mb-6 font-normal">
+            <p className="text-sm sm:text-base md:text-lg text-white mb-4 sm:mb-6 font-normal">
               I'm currently open to exploring new opportunities.
             </p>
 
-            <p className="text-sm text-neutral-300 leading-relaxed max-w-md">
+            <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed max-w-md">
               <strong className="text-white font-semibold">P.S.</strong> My email has been flooded lately, but I reply quicker if you reach out via this message box or say hello on LinkedIn!
             </p>
           </div>
 
           {/* Social Links on Bottom Left matching Image 3 */}
-          <div className="flex items-center gap-8 mt-12 pt-4 text-base font-normal text-white">
+          <div className="flex items-center gap-6 sm:gap-8 mt-8 sm:mt-12 pt-4 text-sm sm:text-base font-normal text-white">
             <a 
               href="mailto:rehmanshakil21@gmail.com" 
               className="hover:underline transition-opacity hover:opacity-80"

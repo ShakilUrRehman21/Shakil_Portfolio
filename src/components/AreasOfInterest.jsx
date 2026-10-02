@@ -52,24 +52,24 @@ export default function AreasOfInterest({ playSound }) {
   ];
 
   return (
-    <section id="aboutMe" className="w-full bg-[#276749] text-white pt-10 pb-16 px-6 md:px-12 relative overflow-hidden select-none">
+    <section id="aboutMe" className="w-full bg-[#276749] text-white pt-8 sm:pt-10 pb-12 sm:pb-16 px-4 sm:px-6 md:px-12 relative overflow-hidden select-none">
 
       {/* Decorative Golden Bar separating sections at top edge */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-72 sm:w-96 h-3 bg-[#E5A823] rounded-b-xl border border-black/20 shadow-md"></div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 sm:w-96 h-2.5 sm:h-3 bg-[#E5A823] rounded-b-xl border border-black/20 shadow-md"></div>
 
-      <div className="max-w-6xl w-full mx-auto flex flex-col items-center pt-8">
+      <div className="max-w-6xl w-full mx-auto flex flex-col items-center pt-6 sm:pt-8">
 
         {/* Main 2-Column Content */}
-        <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start relative z-10 pb-8">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-14 items-start relative z-10 pb-6 sm:pb-8">
 
           {/* Left Column: Heading & Tech Domain Stack Badges */}
           <div className="lg:col-span-6 flex flex-col">
-            <h2 className="doodle-font text-4xl sm:text-5xl font-normal text-white mb-6">
+            <h2 className="doodle-font text-3xl sm:text-4xl md:text-5xl font-normal text-white mb-4 sm:mb-6">
               Areas of interest
             </h2>
 
             {/* Interactive Tech Architecture Stack Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-3.5 w-full">
               {domains.map((dom) => (
                 <div 
                   key={dom.category}

@@ -13,15 +13,15 @@ export default function ProjectsSection({ theme, onSelectProject, playSound }) {
   const tabColor = isDark ? "#FFFFFF" : "#000000";
 
   return (
-    <section id="projects" className="w-full pt-8 pb-16 px-6 md:px-12 flex justify-center">
+    <section id="projects" className="w-full pt-6 sm:pt-8 pb-12 sm:pb-16 px-4 sm:px-6 md:px-12 flex justify-center">
       <div className="max-w-6xl w-full">
         
         {/* Centered Top Filter Tabs */}
-        <div className="flex items-center justify-center gap-6 md:gap-8 mb-12 flex-wrap">
+        <div className="flex items-center justify-center gap-3 sm:gap-6 md:gap-8 mb-8 sm:mb-12 flex-wrap">
           {/* "Featured Projects" Tab */}
           <button
             onClick={() => handleTabChange("all")}
-            className="relative pb-2 font-semibold text-base md:text-lg transition-colors cursor-pointer"
+            className="relative pb-2 font-semibold text-sm sm:text-base md:text-lg transition-colors cursor-pointer"
             style={{ color: tabColor }}
           >
             <span>All Projects</span>
@@ -33,7 +33,7 @@ export default function ProjectsSection({ theme, onSelectProject, playSound }) {
           {/* "AI & LLM Systems" Tab */}
           <button
             onClick={() => handleTabChange("ai")}
-            className="relative pb-2 font-semibold text-base md:text-lg flex items-center gap-2 transition-colors cursor-pointer"
+            className="relative pb-2 font-semibold text-sm sm:text-base md:text-lg flex items-center gap-2 transition-colors cursor-pointer"
             style={{ color: tabColor }}
           >
             <span>AI & LLM Systems</span>
@@ -45,7 +45,7 @@ export default function ProjectsSection({ theme, onSelectProject, playSound }) {
           {/* "Distributed & Web" Tab */}
           <button
             onClick={() => handleTabChange("fullstack")}
-            className="relative pb-2 font-semibold text-base md:text-lg flex items-center gap-2 transition-colors cursor-pointer"
+            className="relative pb-2 font-semibold text-sm sm:text-base md:text-lg flex items-center gap-2 transition-colors cursor-pointer"
             style={{ color: tabColor }}
           >
             <span>Real-time & Full Stack</span>
@@ -56,7 +56,7 @@ export default function ProjectsSection({ theme, onSelectProject, playSound }) {
         </div>
 
         {/* Project Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           
           {/* ================= CARD 1: CourseGen AI ================= */}
           {(activeTab === "all" || activeTab === "ai") && (
@@ -65,11 +65,11 @@ export default function ProjectsSection({ theme, onSelectProject, playSound }) {
                 playSound && playSound("pop");
                 onSelectProject && onSelectProject("coursegen");
               }}
-              className="group relative rounded-3xl bg-[#0F172A] text-white p-7 md:p-8 flex flex-col justify-between overflow-hidden shadow-lg border border-slate-800 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl cursor-pointer min-h-[460px]"
+              className="group relative rounded-3xl bg-[#0F172A] text-white p-5 sm:p-7 md:p-8 flex flex-col justify-between overflow-hidden shadow-lg border border-slate-800 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl cursor-pointer min-h-[420px] sm:min-h-[460px]"
             >
               {/* Top Badges */}
               <div className="flex items-center justify-between mb-4 gap-2 flex-wrap">
-                <span className="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                <span className="px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
                   Featured AI Platform
                 </span>
                 <div className="flex items-center gap-2">
@@ -146,18 +146,18 @@ export default function ProjectsSection({ theme, onSelectProject, playSound }) {
                 playSound && playSound("pop");
                 onSelectProject && onSelectProject("torquevault");
               }}
-              className="group relative rounded-3xl bg-[#141217] text-white p-7 md:p-8 flex flex-col justify-between overflow-hidden shadow-lg border border-[#3b0d13] transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl cursor-pointer min-h-[460px]"
+              className="group relative rounded-3xl bg-[#141217] text-white p-5 sm:p-7 md:p-8 flex flex-col justify-between overflow-hidden shadow-lg border border-[#3b0d13] transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl cursor-pointer min-h-[420px] sm:min-h-[460px]"
             >
               {/* Top Badges */}
               <div className="flex items-center justify-between mb-4 gap-2 flex-wrap">
-                <span className="px-3 py-1 rounded-full text-xs font-semibold bg-[#75020f]/40 text-[#ff4d64] border border-[#e61932]/40">
+                <span className="px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-semibold bg-[#75020f]/40 text-[#ff4d64] border border-[#e61932]/40">
                   Web Audio Synthesizer
                 </span>
                 <div className="flex items-center gap-2">
-                  <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-neutral-900 text-neutral-300 border border-neutral-700">
+                  <span className="px-2 sm:px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium bg-neutral-900 text-neutral-300 border border-neutral-700">
                     Vanilla JS
                   </span>
-                  <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-neutral-900 text-neutral-300 border border-neutral-700">
+                  <span className="px-2 sm:px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium bg-neutral-900 text-neutral-300 border border-neutral-700">
                     60 FPS HUD
                   </span>
                 </div>
@@ -217,18 +217,18 @@ export default function ProjectsSection({ theme, onSelectProject, playSound }) {
                 playSound && playSound("pop");
                 onSelectProject && onSelectProject("syncworld");
               }}
-              className="group relative rounded-3xl bg-[#090D16] text-white p-7 md:p-8 flex flex-col justify-between overflow-hidden shadow-lg border border-indigo-950 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl cursor-pointer min-h-[460px]"
+              className="group relative rounded-3xl bg-[#090D16] text-white p-5 sm:p-7 md:p-8 flex flex-col justify-between overflow-hidden shadow-lg border border-indigo-950 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl cursor-pointer min-h-[420px] sm:min-h-[460px]"
             >
               {/* Top Badges */}
               <div className="flex items-center justify-between mb-4 gap-2 flex-wrap">
-                <span className="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+                <span className="px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
                   Real-Time Distributed System
                 </span>
                 <div className="flex items-center gap-2">
-                  <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-900 text-slate-300 border border-slate-700">
+                  <span className="px-2 sm:px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium bg-slate-900 text-slate-300 border border-slate-700">
                     WebSockets
                   </span>
-                  <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-900 text-slate-300 border border-slate-700">
+                  <span className="px-2 sm:px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium bg-slate-900 text-slate-300 border border-slate-700">
                     OpenJDK 21
                   </span>
                 </div>
@@ -283,18 +283,18 @@ export default function ProjectsSection({ theme, onSelectProject, playSound }) {
                 playSound && playSound("pop");
                 onSelectProject && onSelectProject("prepmaster");
               }}
-              className="group relative rounded-3xl bg-[#0F141C] text-white p-7 md:p-8 flex flex-col justify-between overflow-hidden shadow-lg border border-slate-800 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl cursor-pointer min-h-[460px]"
+              className="group relative rounded-3xl bg-[#0F141C] text-white p-5 sm:p-7 md:p-8 flex flex-col justify-between overflow-hidden shadow-lg border border-slate-800 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl cursor-pointer min-h-[420px] sm:min-h-[460px]"
             >
               {/* Top Badges */}
               <div className="flex items-center justify-between mb-4 gap-2 flex-wrap">
-                <span className="px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/20 text-sky-300 border border-sky-500/30">
+                <span className="px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-semibold bg-sky-500/20 text-sky-300 border border-sky-500/30">
                   AI Mock Interview Studio
                 </span>
                 <div className="flex items-center gap-2">
-                  <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-900 text-slate-300 border border-slate-700">
+                  <span className="px-2 sm:px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium bg-slate-900 text-slate-300 border border-slate-700">
                     Next.js 15
                   </span>
-                  <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-900 text-slate-300 border border-slate-700">
+                  <span className="px-2 sm:px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium bg-slate-900 text-slate-300 border border-slate-700">
                     Speech-to-Text
                   </span>
                 </div>
@@ -354,21 +354,21 @@ export default function ProjectsSection({ theme, onSelectProject, playSound }) {
                 playSound && playSound("pop");
                 onSelectProject && onSelectProject("milkmart");
               }}
-              className="group relative rounded-3xl bg-[#0E1B15] text-white p-7 md:p-8 flex flex-col justify-between overflow-hidden shadow-lg border border-emerald-950 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl cursor-pointer min-h-[460px] md:col-span-2"
+              className="group relative rounded-3xl bg-[#0E1B15] text-white p-5 sm:p-7 md:p-8 flex flex-col justify-between overflow-hidden shadow-lg border border-emerald-950 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl cursor-pointer min-h-[420px] sm:min-h-[460px] md:col-span-2"
             >
               {/* Top Badges */}
               <div className="flex items-center justify-between mb-4 gap-2 flex-wrap">
-                <span className="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                <span className="px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
                   Django E-Commerce System
                 </span>
-                <div className="flex items-center gap-2">
-                  <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-neutral-900 text-neutral-300 border border-neutral-700">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="px-2 sm:px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium bg-neutral-900 text-neutral-300 border border-neutral-700">
                     Python 3 / Django
                   </span>
-                  <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-neutral-900 text-neutral-300 border border-neutral-700">
+                  <span className="px-2 sm:px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium bg-neutral-900 text-neutral-300 border border-neutral-700">
                     Razorpay Gateway
                   </span>
-                  <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-neutral-900 text-neutral-300 border border-neutral-700">
+                  <span className="px-2 sm:px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium bg-neutral-900 text-neutral-300 border border-neutral-700 hidden sm:inline">
                     Cold-Chain Logistics
                   </span>
                 </div>
@@ -387,35 +387,35 @@ export default function ProjectsSection({ theme, onSelectProject, playSound }) {
 
               {/* Visual: Order Lifecycle Stepper & Dashboard */}
               <div className="relative w-full h-44 flex items-center justify-center mt-2">
-                <div className="w-full max-w-2xl bg-neutral-950/80 border border-emerald-900/60 rounded-2xl p-4 shadow-xl flex flex-col justify-between">
-                  <div className="flex items-center justify-between text-xs text-neutral-400 border-b border-neutral-800 pb-2 font-mono">
-                    <span className="text-emerald-400 font-bold">ORDER FULFILLMENT PIPELINE</span>
-                    <span>100% ORGANIC DAIRY</span>
+                <div className="w-full max-w-2xl bg-neutral-950/80 border border-emerald-900/60 rounded-2xl p-3 sm:p-4 shadow-xl flex flex-col justify-between">
+                  <div className="flex items-center justify-between text-[11px] sm:text-xs text-neutral-400 border-b border-neutral-800 pb-2 font-mono">
+                    <span className="text-emerald-400 font-bold truncate">ORDER FULFILLMENT PIPELINE</span>
+                    <span className="whitespace-nowrap">100% ORGANIC</span>
                   </div>
 
                   {/* 4-Stage Lifecycle Stepper */}
-                  <div className="grid grid-cols-4 gap-2 my-3 text-center">
-                    <div className="p-2 rounded-xl bg-emerald-950/80 border border-emerald-800/80">
-                      <span className="text-emerald-400 font-bold text-xs block">✓ Accepted</span>
-                      <span className="text-[9px] text-neutral-400">Order Placed</span>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 my-2.5 sm:my-3 text-center">
+                    <div className="p-1.5 sm:p-2 rounded-xl bg-emerald-950/80 border border-emerald-800/80">
+                      <span className="text-emerald-400 font-bold text-[11px] sm:text-xs block">✓ Accepted</span>
+                      <span className="text-[8px] sm:text-[9px] text-neutral-400">Order Placed</span>
                     </div>
-                    <div className="p-2 rounded-xl bg-emerald-950/80 border border-emerald-800/80">
-                      <span className="text-emerald-400 font-bold text-xs block">✓ Packed</span>
-                      <span className="text-[9px] text-neutral-400">4°C Cold Chain</span>
+                    <div className="p-1.5 sm:p-2 rounded-xl bg-emerald-950/80 border border-emerald-800/80">
+                      <span className="text-emerald-400 font-bold text-[11px] sm:text-xs block">✓ Packed</span>
+                      <span className="text-[8px] sm:text-[9px] text-neutral-400">4°C Cold Chain</span>
                     </div>
-                    <div className="p-2 rounded-xl bg-emerald-900/40 border border-emerald-700/60 animate-pulse">
-                      <span className="text-emerald-300 font-bold text-xs block">🚚 On The Way</span>
-                      <span className="text-[9px] text-emerald-200">Morning Express</span>
+                    <div className="p-1.5 sm:p-2 rounded-xl bg-emerald-900/40 border border-emerald-700/60 animate-pulse">
+                      <span className="text-emerald-300 font-bold text-[11px] sm:text-xs block">🚚 On The Way</span>
+                      <span className="text-[8px] sm:text-[9px] text-emerald-200">Morning Express</span>
                     </div>
-                    <div className="p-2 rounded-xl bg-neutral-900 border border-neutral-800">
-                      <span className="text-neutral-400 font-bold text-xs block">Delivered</span>
-                      <span className="text-[9px] text-neutral-500">Doorstep Verification</span>
+                    <div className="p-1.5 sm:p-2 rounded-xl bg-neutral-900 border border-neutral-800">
+                      <span className="text-neutral-400 font-bold text-[11px] sm:text-xs block">Delivered</span>
+                      <span className="text-[8px] sm:text-[9px] text-neutral-500">Doorstep Verification</span>
                     </div>
                   </div>
 
-                  <div className="flex justify-between items-center text-[10px] text-emerald-300">
-                    <span>⚡ Production Deployment: Gunicorn + WhiteNoise + Docker</span>
-                    <span className="font-bold underline hover:text-white">Explore Full Case Study →</span>
+                  <div className="flex justify-between items-center text-[9px] sm:text-[10px] text-emerald-300">
+                    <span className="truncate">⚡ Production: Gunicorn + Docker</span>
+                    <span className="font-bold underline hover:text-white whitespace-nowrap ml-2">Explore Case Study →</span>
                   </div>
                 </div>
               </div>
